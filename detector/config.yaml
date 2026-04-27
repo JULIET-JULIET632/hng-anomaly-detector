@@ -1,0 +1,24 @@
+slack:
+  webhook_url: "YOUR_SLACK_WEBHOOK_URL_HERE"
+
+nginx:
+  log_path: "/var/log/nginx/hng-access.log"
+
+detection:
+  window_seconds: 60
+  z_score_threshold: 3.0
+  ratio_threshold: 5.0
+  error_surge_multiplier: 3.0
+  tightened_z_threshold: 1.5
+  tightened_ratio_threshold: 2.5
+  cooldown_seconds: 30
+  global_cooldown_seconds: 60
+
+dashboard:
+  port: 8080
+
+audit:
+  log_path: "/var/log/hng-detector/audit.log"
+
+unbanner:
+  check_interval: 10
